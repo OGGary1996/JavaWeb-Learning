@@ -15,6 +15,7 @@ class CarInfoStreamAPITest {
 
     @BeforeEach // 为所有方法创建carGroup对象
     void setUp(){
+        carInfoStreamAPI = new CarInfoStreamAPI();
         carGroup = new ArrayList<>();
         carGroup.add(new CarInfo(2009,"Mazda"));
         carGroup.add(new CarInfo(2019,"Audi"));
@@ -24,6 +25,7 @@ class CarInfoStreamAPITest {
     @AfterEach // 为所有方法销毁carGroup对象
     void tearDown(){
         carGroup = null;
+        carInfoStreamAPI = null;
         System.out.println("This will show after each test method");
     }
 
