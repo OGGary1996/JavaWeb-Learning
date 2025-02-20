@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload of Form Exercise</title>
+</head>
+<body>
+<header>
+    <h2>Following are exercises of file uploading demo</h2>
+    <hr>
+</header>
+
+<main>
+    <section>
+        <h3>1. Simple file upload</h3>
+        <form action="5.0%20submit.html" method="post" enctype="multipart/form-data">
+            <label for="file">Upload your file here:</label>
+            <br><br>
+            <input type="file" id="file" name="file">
+            <br><br>
+            <input type="submit" value="Upload">
+            <input type="reset" value="Reset">
+        </form>
+
+        <h3>2. Specify file format</h3>
+        <p><label for="file2">Upload yor file here (Only PDF or Doc):</label></p>
+        <form action="5.0%20submit.html" method="post" enctype="multipart/form-data">
+            <p><input type="file" id="file2" name="file" accept="pdf/*,doc/*"></p>
+            <input type="submit" value="Upload">&nbsp;
+            <input type="reset" value="Reset">
+        </form>
+
+        <h3>3. Upload multiple files</h3>
+        <form action="5.0%20submit.html" method="post" enctype="multipart/form-data">
+            <p><label for="file3"><em>Upload your files here (Only PDF and Doc):</em></label></p>
+            <p><input type="file" id="file3" name="files" multiple accept="PDF/*,doc/*"></p>
+            <input type="submit" value="Upload">&nbsp;
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+</main>
+</body>
+</html>

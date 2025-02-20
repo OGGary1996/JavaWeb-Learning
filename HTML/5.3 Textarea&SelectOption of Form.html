@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Textarea, select option exercise</title>
+</head>
+<body>
+
+<header>
+    <h2>This is exercise of Textarea select option of Form</h2>
+    <hr>
+</header>
+
+<main>
+    <section>
+        <h3>Textarea</h3>
+        <h4>1. Simple textarea</h4>
+        <form action="5.0%20submit.html" method="post">
+            <label for="comment">Please type in your comment: </label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <h4>2. Textarea with more attributes</h4>
+        <label for="comment2">Your Comment:</label>
+        <form action="5.0%20submit.html" method="post">
+            <textarea name="UserComment" id="comment2"
+                      cols="40" rows="10"
+                      placeholder="Please type in your comment"
+                      required>
+            </textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+    <br><br>
+    <section>
+        <h3>下拉菜单</h3>
+        <h4>1.简单的下拉菜单</h4>
+        <form action="5.0%20submit.html" method="post">
+            <label for="city">Choose your location:</label>
+            <select name="city" id="city">
+                <option value="beijing" selected>北京</option>
+                <option value="tianjin">天津</option>
+                <option value="shanghai">上海</option>
+                <option value="chongqing">重庆</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <h4>2.支持多选的下拉菜单</h4>
+        <form action="5.0%20submit.html" method="post">
+            <label for="fruit">Choose fruits you like:</label>
+            <select name="fruits" id="fruit" multiple size="4">
+                <option value="apple">苹果</option>
+                <option value="pear">梨</option>
+                <option value="banana">香蕉</option>
+                <option value="grape">葡萄</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <h4>3.带分组的下拉菜单</h4>
+        <form action="5.0%20submit.html" method="post">
+            <label for="cars">Choose you car:</label>
+            <select name="Cars" id="cars">
+                <optgroup label="Germany">
+                    <option value="Audi">奥迪</option>
+                    <option value="Benz">奔驰</option>
+                    <option value="BMW">宝马</option>
+                </optgroup>
+                <optgroup label="Japan">
+                    <option value="Toyota">丰田</option>
+                    <option value="Honda">本田</option>
+                    <option value="Nissan">日产</option>
+                </optgroup>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+</main>
+<br><br><br><br>
+</body>
+</html>
