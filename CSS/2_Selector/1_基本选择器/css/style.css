@@ -1,0 +1,34 @@
+/*通配符选择器*/
+*{
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*标签选择器*/
+h1{
+    color: blueviolet;
+    font-size: 40px;
+    background-color: green;
+}
+
+/*类选择器*/
+.l2-title{
+    background-color:cadetblue;
+    font-size: 30px;
+}
+.l3title{
+    background-color: darkcyan;
+    font-size: 20px;
+}
+.highlight{
+    background-color: yellow;
+}
+
+
+/*组合选择器*/
+.box.intro.highlight{
+    font-style: oblique;
+    font-size: 20px;
+}
+

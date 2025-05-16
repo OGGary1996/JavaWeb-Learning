@@ -1,0 +1,10 @@
+h3{
+  color: green;
+  font-size: 20px;
+  text-align: center;
+}
+img{
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+}

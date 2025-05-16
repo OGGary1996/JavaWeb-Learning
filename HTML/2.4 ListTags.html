@@ -6,92 +6,105 @@
 </head>
 <body>
 <!--无序列表 unordered List-->
-<h2> Some Example of List </h2>
-<hr/>
-<h3> Unordered List </h3>
-<hr>
-<h4> Fruits </h4>
+<h2>Examples of unordered list</h2>
+<h3>Unordered list</h3>
 <ul>
-  <li> Apple </li>
-  <li> Banana </li>
-  <li> Orange </li>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Orange</li>
+    <li>Tomato</li>
 </ul>
-
-<h4> Fruits with customized sign </h4>
+<br>
+<h3>Unordered list with customized style</h3>
 <style>
-  ul{
-    list-style-type: square;
-  }
+    #squareUL{
+        /*改为方块*/
+        list-style-type: square;
+    }
 </style>
-<ul>
-  <li> Apple </li>
-  <li> Banana </li>
-  <li> Orange </li>
+<ul id = "squareUL">
+    <li>JavaSE</li>
+    <li>Git</li>
+    <li>HTML</li>
+    <li>JavaScript</li>
+    <li>React</li>
 </ul>
-<br/>
-<!--有序列表 ordered List-->
-<h3> Ordered List</h3>
 <hr>
-<h4> Learning path</h4>
-<ol>
-  <li>Java SE</li>
-  <li>Git</li>
-  <li>HTML</li>
-  <li>JavaScript</li>
-  <li>React</li>
-</ol>
 
-<h4> Learning path with customized order</h4>
-<ol type="a">
-  <li>Java SE</li>
-  <li>Git</li>
-  <li>HTML</li>
-  <li>JavaScript</li>
-  <li>React</li>
+<!--有序列表 ordered List-->
+<h3>Examples of ordered list</h3>
+<h4>ordered list</h4>
+<ol>
+    <li>javaSE</li>
+    <li>MySQL</li>
+    <li>java web</li>
+    <li>javaScript</li>
 </ol>
-<br/>
-<ol start="2">
-  <li>Java SE</li>
-  <li>Git</li>
-  <li>HTML</li>
-  <li>JavaScript</li>
-  <li>React</li>
+<br>
+<h3>ordered list with customized symbol</h3>
+<ol type="A">
+    <li>javaSE</li>
+    <li>MySQL</li>
+    <li>java web</li>
+    <li>javaScript</li>
 </ol>
-<br/>
-<ol reversed>
-  <li>Java SE</li>
-  <li>Git</li>
-  <li>HTML</li>
-  <li>JavaScript</li>
-  <li>React</li>
+<ol type="i">
+    <li>javaSE</li>
+    <li>MySQL</li>
+    <li>java web</li>
+    <li>javaScript</li>
 </ol>
-<br/>
+<hr>
+
 <!--组合的列表-->
 <h3> Combination of ul&ol </h3>
-<hr>
 <h4> Fruits & Vegetable</h4>
 <ul>
-  <li>Fruits
-    <ol>
-      <li> Apple </li>
-      <li> Banana </li>
-      <li> Orange </li>
-    </ol>
-  </li>
-  <li>Veges
-    <ol>
-      <li> Tomato </li>
-      <li> Potato </li>
-      <li> Carrot </li>
-    </ol>
-  </li>
+    <li>
+        Fruits
+        <ol>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Orange</li>
+        </ol>
+    </li>
+    <li>
+        Vegetable
+        <ol>
+            <li>Tomato</li>
+            <li>Potato</li>
+            <li>Carrot</li>
+        </ol>
+    </li>
 </ul>
+<br>
+<h4> Learning path</h4>
+<ol>
+    <li>
+        javaSE
+        <ul>
+            <li>syntax</li>
+            <li>multi-thread</li>
+            <li>IO</li>
+            <li>Collection</li>
+        </ul>
+    </li>
+    <li>
+        Mysql
+        <ul>
+            <li>DDL</li>
+            <li>DML</li>
+            <li>SQL</li>
+        </ul>
+    </li>
+</ol>
 
+
+<hr>
 
 <!--定义列表 definition List
 常用在网站下方的版权声明-->
 <h3>Definition List</h3>
-<hr/>
     <dl>
         <dt>HTML</dt>
         <dd>Using for build the structure of web page</dd>
