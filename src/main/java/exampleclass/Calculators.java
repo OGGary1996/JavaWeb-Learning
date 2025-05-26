@@ -1,5 +1,7 @@
 package exampleclass;
 
+import java.util.Arrays;
+
 public class Calculators {
     @Override
     public String toString(){ // 重写Object class中的默认的toString()方法
@@ -7,17 +9,11 @@ public class Calculators {
     }
 
     public int add(int num1 , int num2) {
-        int result = num1 + num2;
-        return result;
+        return num1 + num2;
     }
     // method overloading 
-    public int add(int num1, int num2, int num3) {
-        int result = num1 + num2 + num3;
-        return result;
-    }
-    public double add(double num1 , int num2) {
-        double result = num1 + num2;
-        return result;
+    public int add(int...numbers){
+        return Arrays.stream(numbers).sum();
     }
 
     public int sub(int num1,int num2){
@@ -29,6 +25,9 @@ public class Calculators {
     }
 
     public double div(double num1,double num2){
+        if (num2 == 0){
+            throw new ArithmeticException("Division by zero");
+        }
         return (num1 / num2);
     }
 }
