@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserList</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/script.js" defer></script>
+</head>
+<body>
+<header>
+    <div id="title">
+        <h1>User List</h1>
+    </div>
+</header>
+
+<main id="app">
+    <div id="search">
+        <div id="form">
+            <form action="#" method="POST">
+                <label for="name">Name</label>
+                <input v-model="searchForm.name" type="text" id="name" name="name" placeholder="Enter name to search">&nbsp;
+                <label for="gender">Gender</label>
+                <select v-model="searchForm.gender" name="gender" id="gender">
+                    <option value="" selected>Not specify</option>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>&nbsp;
+                <label for="age">Age</label>
+                <input v-model="searchForm.age" type="text" id="age" name="age" placeholder="Enter age to search">&nbsp;
+            </form>
+        </div>
+        <div id="button">
+            <input v-on:click="searchHandler()" type="button" value="Search" id="searchBtn">
+            <input v-on:click="resetHandler()" type="button" value="Reset" id="resetBtn">
+        </div>
+    </div>
+
+    <div id="table">
+        <table>
+            <thead>
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Profile</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Major</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(user,index) in users" :key="user.name"
+                v-bind:style="{fontWeight: user.name === hoveredUserName ? 'bold' : 'normal'}"
+                v-on:mouseenter="handleMouseEnter(user.name)"
+                v-on:mouseleave="handleMouseLeave()">
+                <td>{{index + 1}}</td>
+                <td>{{user.name}}</td>
+                <td><img v-bind:src="user.profile" v-bind:alt="user.name"></img></td>
+                <td>{{user.gender === 1 ? "Mela" : "Female"}}</td>
+                <td>{{user.age}}</td>
+                <td>
+                    <span v-if="user.major === 0">CS</span>
+                    <span v-else-if="user.major === 1">Math</span>
+                    <span v-else-if="user.major === 2">Physics</span>
+                    <span v-else-if="user.major === 3">Chemistry</span>
+                    <span v-else-if="user.major === 4">Biology</span>
+                    <span v-else-if="user.major === 5">English</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>
