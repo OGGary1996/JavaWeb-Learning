@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/script.js" defer></script>
+</head>
+<body>
+<header>
+    <div id="title">
+        <h1>Employees List</h1>
+    </div>
+</header>
+
+<main id="app">
+    <div id="table">
+        <table>
+            <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job Title</th>
+                <th>Salary</th>
+                <th>Reports to</th>
+                <th>Office Id</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="emp in employees" :key="emp.employee_id"
+                v-bind:style="{fontWeight: emp.employee_id === hoveredEmpId ? 'bold' : 'normal'}"
+                v-on:mouseenter="handleMouseEnter(emp.employee_id)"
+                v-on:mouseleave="handleMouseLeave()">
+                <td>{{emp.employee_id}}</td>
+                <td>{{emp.first_name}}</td>
+                <td>{{emp.last_name}}</td>
+                <td>{{emp.job_title}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.reports_to}}</td>
+                <td>{{emp.office_id}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>
