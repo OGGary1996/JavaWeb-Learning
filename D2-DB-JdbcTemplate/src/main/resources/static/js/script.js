@@ -9,7 +9,7 @@ const app = createApp({
     },
     methods:{
         handleMouseEnter(empId){
-            this.hoveredEmpId == empId;
+            this.hoveredEmpId=empId;
         },
         handleMouseLeave(){
             this.hoveredEmpId=null;

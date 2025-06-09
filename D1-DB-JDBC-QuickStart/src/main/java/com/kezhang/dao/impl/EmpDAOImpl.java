@@ -12,8 +12,8 @@ import java.util.List;
 public class EmpDAOImpl implements EmpDAO {
 
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/sql_hr?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-    private static final String JDBC_USER = "zhang";
-    private static final String JDBC_PASSWORD = "050715";
+    private static final String JDBC_USER = "root";
+    private static final String JDBC_PASSWORD = "Zk48658345@1996";
     private Connection connection;
     private List<Emp> empList = new ArrayList<>();
 
@@ -42,9 +42,8 @@ public class EmpDAOImpl implements EmpDAO {
     public List<Emp> getAllEmp() throws Exception {
         this.dbConnect();
         // 创建SQL查询语句
-        String sql = "SELECT * FROM ?";
+        String sql = "SELECT * FROM employees";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setString(1,"employees");
         ResultSet resultSet = preparedStatement.executeQuery();
         while(resultSet.next()){
             // 获取每一行数据
