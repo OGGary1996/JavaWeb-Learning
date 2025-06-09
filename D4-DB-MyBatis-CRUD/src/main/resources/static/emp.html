@@ -18,157 +18,165 @@
     </header>
 
     <main id="app" class="main-content">
-        <!-- Search and Operations Section -->
-        <section class="search-section">
-            <div class="card">
-                <h2><i class="fas fa-search"></i> Search Employee</h2>
-                <div class="form-group">
-                    <label for="employeeId">Employee ID:</label>
-                    <input v-model.number="searchForm.employeeId"
-                           id="employeeId"
-                           name="employeeId" 
-                           placeholder="Enter Employee ID to search"
-                           class="form-input">
-                </div>
-                <div class="button-group">
-                    <button v-on:click="showAll()" class="btn btn-primary">
-                        <i class="fas fa-list"></i> Show All Employees
-                    </button>
-                    <button v-on:click="searchHandler()" class="btn btn-success">
-                        <i class="fas fa-search"></i> Search Employee
-                    </button>
-                    <button v-on:click="deleteHandler()" class="btn btn-danger">
-                        <i class="fas fa-trash"></i> Delete Employee
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Add/Update Employee Section -->
-        <section class="insert-section">
-            <div class="card">
-                <h2><i class="fas fa-user-plus"></i> Employee Information</h2>
-                <form class="employee-form">
-                    <!-- Employee ID - Full Width Row -->
-                    <div class="form-row-full">
+        <!-- Two Column Layout Container -->
+        <div class="layout-container">
+            <!-- Left Column: Search and Form Sections -->
+            <div class="left-column">
+                <!-- Search Section -->
+                <section class="search-section">
+                    <div class="card">
+                        <h2><i class="fas fa-search"></i> Search Employee</h2>
                         <div class="form-group">
-                            <label for="insertEmployeeId">Employee ID:</label>
-                            <input v-model.number="insertForm.employeeId"
-                                   id="insertEmployeeId"
+                            <label for="employeeId">Employee ID:</label>
+                            <input v-model.number="searchForm.employeeId"
+                                   id="employeeId"
                                    name="employeeId" 
-                                   placeholder="Enter Employee ID"
+                                   placeholder="Enter Employee ID to search"
                                    class="form-input">
+                        </div>
+                        <div class="button-group">
+                            <button v-on:click="showAll()" class="btn btn-primary">
+                                <i class="fas fa-list"></i> Show All
+                            </button>
+                            <button v-on:click="searchHandler()" class="btn btn-success">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                            <button v-on:click="deleteHandler()" class="btn btn-danger">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
                         </div>
                     </div>
-                    <!-- Name Fields -->
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="insertFirstName">First Name:</label>
-                            <input v-model="insertForm.firstName" 
-                                   type="text" 
-                                   id="insertFirstName" 
-                                   name="firstName" 
-                                   placeholder="Enter First Name"
-                                   class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="insertLastName">Last Name:</label>
-                            <input v-model="insertForm.lastName" 
-                                   type="text" 
-                                   id="insertLastName" 
-                                   name="lastName" 
-                                   placeholder="Enter Last Name"
-                                   class="form-input">
-                        </div>
-                    </div>
-                    <!-- Job and Salary Fields -->
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="insertJobTitle">Job Title:</label>
-                            <input v-model="insertForm.jobTitle" 
-                                   type="text" 
-                                   id="insertJobTitle" 
-                                   name="jobTitle" 
-                                   placeholder="Enter Job Title"
-                                   class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="insertSalary">Salary:</label>
-                            <input v-model.number="insertForm.salary"
-                                   type="number" 
-                                   id="insertSalary" 
-                                   name="salary" 
-                                   placeholder="Enter Salary"
-                                   class="form-input">
-                        </div>
-                    </div>
-                    <!-- Reports To and Office ID Fields -->
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="insertReportsTo">Reports To:</label>
-                            <input v-model.number="insertForm.reportsTo"
-                                   id="insertReportsTo"
-                                   name="reportsTo" 
-                                   placeholder="Enter Reports To ID"
-                                   class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="insertOfficeId">Office ID:</label>
-                            <input v-model.number="insertForm.officeId"
-                                   id="insertOfficeId"
-                                   name="officeId" 
-                                   placeholder="Enter Office ID"
-                                   class="form-input">
-                        </div>
-                    </div>
-                </form>
-                <div class="button-group">
-                    <button v-on:click="insertHandler()" class="btn btn-primary">
-                        <i class="fas fa-plus"></i> Add Employee
-                    </button>
-                    <button v-on:click="updateHandler()" class="btn btn-warning">
-                        <i class="fas fa-edit"></i> Update Employee
-                    </button>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!-- Employee List Section -->
-        <section class="table-section">
-            <div class="card">
-                <h2><i class="fas fa-table"></i> Employee List</h2>
-                <div class="table-container">
-                    <table class="employee-table">
-                        <thead>
-                        <tr>
-                            <th><i class="fas fa-id-badge"></i> Employee ID</th>
-                            <th><i class="fas fa-user"></i> First Name</th>
-                            <th><i class="fas fa-user"></i> Last Name</th>
-                            <th><i class="fas fa-briefcase"></i> Job Title</th>
-                            <th><i class="fas fa-dollar-sign"></i> Salary</th>
-                            <th><i class="fas fa-user-tie"></i> Reports To</th>
-                            <th><i class="fas fa-building"></i> Office ID</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr v-for="emp in employees" 
-                            :key="emp.employeeId"
-                            :class="{ 'row-hover': emp.employeeId === hoveredEmpId }"
-                            v-on:mouseenter="handleMouseEnter(emp.employeeId)"
-                            v-on:mouseleave="handleMouseLeave()">
-                            <td class="emp-id">{{emp.employeeId}}</td>
-                            <td>{{emp.firstName}}</td>
-                            <td>{{emp.lastName}}</td>
-                            <td class="job-title">{{emp.jobTitle}}</td>
-                            <td class="salary">${{emp.salary}}</td>
-                            <td>{{emp.reportsTo}}</td>
-                            <td>{{emp.officeId}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <!-- Add/Update Employee Section -->
+                <section class="insert-section">
+                    <div class="card">
+                        <h2><i class="fas fa-user-plus"></i> Employee Information</h2>
+                        <form class="employee-form">
+                            <!-- Employee ID - Full Width Row -->
+                            <div class="form-row-full">
+                                <div class="form-group">
+                                    <label for="insertEmployeeId">Employee ID:</label>
+                                    <input v-model.number="insertForm.employeeId"
+                                           id="insertEmployeeId"
+                                           name="employeeId" 
+                                           placeholder="Enter Employee ID"
+                                           class="form-input">
+                                </div>
+                            </div>
+                            <!-- Name Fields -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="insertFirstName">First Name:</label>
+                                    <input v-model="insertForm.firstName" 
+                                           type="text" 
+                                           id="insertFirstName" 
+                                           name="firstName" 
+                                           placeholder="Enter First Name"
+                                           class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="insertLastName">Last Name:</label>
+                                    <input v-model="insertForm.lastName" 
+                                           type="text" 
+                                           id="insertLastName" 
+                                           name="lastName" 
+                                           placeholder="Enter Last Name"
+                                           class="form-input">
+                                </div>
+                            </div>
+                            <!-- Job and Salary Fields -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="insertJobTitle">Job Title:</label>
+                                    <input v-model="insertForm.jobTitle" 
+                                           type="text" 
+                                           id="insertJobTitle" 
+                                           name="jobTitle" 
+                                           placeholder="Enter Job Title"
+                                           class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="insertSalary">Salary:</label>
+                                    <input v-model.number="insertForm.salary"
+                                           type="number" 
+                                           id="insertSalary" 
+                                           name="salary" 
+                                           placeholder="Enter Salary"
+                                           class="form-input">
+                                </div>
+                            </div>
+                            <!-- Reports To and Office ID Fields -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="insertReportsTo">Reports To:</label>
+                                    <input v-model.number="insertForm.reportsTo"
+                                           id="insertReportsTo"
+                                           name="reportsTo" 
+                                           placeholder="Enter Reports To ID"
+                                           class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="insertOfficeId">Office ID:</label>
+                                    <input v-model.number="insertForm.officeId"
+                                           id="insertOfficeId"
+                                           name="officeId" 
+                                           placeholder="Enter Office ID"
+                                           class="form-input">
+                                </div>
+                            </div>
+                        </form>
+                        <div class="button-group">
+                            <button v-on:click="insertHandler()" class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Add Employee
+                            </button>
+                            <button v-on:click="updateHandler()" class="btn btn-warning">
+                                <i class="fas fa-edit"></i> Update Employee
+                            </button>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+
+            <!-- Right Column: Employee List Section -->
+            <div class="right-column">
+                <section class="table-section">
+                    <div class="card">
+                        <h2><i class="fas fa-table"></i> Employee List</h2>
+                        <div class="table-container">
+                            <table class="employee-table">
+                                <thead>
+                                <tr>
+                                    <th><i class="fas fa-id-badge"></i> Employee ID</th>
+                                    <th><i class="fas fa-user"></i> First Name</th>
+                                    <th><i class="fas fa-user"></i> Last Name</th>
+                                    <th><i class="fas fa-briefcase"></i> Job Title</th>
+                                    <th><i class="fas fa-dollar-sign"></i> Salary</th>
+                                    <th><i class="fas fa-user-tie"></i> Reports To</th>
+                                    <th><i class="fas fa-building"></i> Office ID</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr v-for="emp in employees" 
+                                    :key="emp.employeeId"
+                                    :class="{ 'row-hover': emp.employeeId === hoveredEmpId }"
+                                    v-on:mouseenter="handleMouseEnter(emp.employeeId)"
+                                    v-on:mouseleave="handleMouseLeave()">
+                                    <td class="emp-id">{{emp.employeeId}}</td>
+                                    <td>{{emp.firstName}}</td>
+                                    <td>{{emp.lastName}}</td>
+                                    <td class="job-title">{{emp.jobTitle}}</td>
+                                    <td class="salary">${{emp.salary}}</td>
+                                    <td>{{emp.reportsTo}}</td>
+                                    <td>{{emp.officeId}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
