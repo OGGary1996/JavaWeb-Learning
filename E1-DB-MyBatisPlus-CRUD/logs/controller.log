@@ -1,0 +1,29 @@
+2025-08-06 13:11:18 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-06 13:11:19 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Fetched all employees successfully. Total records: 51
+2025-08-06 13:12:28 [http-nio-8080-exec-4] INFO  com.kezhang.controller.EmployeeController - Request received to insert multiple employees ...
+2025-08-06 13:12:28 [http-nio-8080-exec-4] INFO  com.kezhang.controller.EmployeeController - Converting DTOs to entities completed, total records: 3
+2025-08-06 13:12:28 [http-nio-8080-exec-4] INFO  com.kezhang.controller.EmployeeController - Employees inserted successfully, total records: 3
+2025-08-06 13:12:51 [http-nio-8080-exec-6] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-06 13:12:51 [http-nio-8080-exec-6] INFO  com.kezhang.controller.EmployeeController - Fetched all employees successfully. Total records: 54
+2025-08-06 13:33:42 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-06 13:33:42 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Fetched all employees successfully. Total records: 54
+2025-08-06 17:46:56 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to search employees by condition: EmployeeQueryParam(id=null, username=, name=, minSalary=50000.00, maxSalary=100000.00, beginDate=null, endDate=null)
+2025-08-06 17:47:59 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to search employees by condition: EmployeeQueryParam(id=null, username=, name=, minSalary=50000.00, maxSalary=100000.00, beginDate=null, endDate=null)
+2025-08-06 17:47:59 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Employees found by condition. Total records: 0
+2025-08-06 18:15:24 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Request received to search employees by condition: EmployeeQueryParam(id=null, username=, name=, minSalary=50000.00, maxSalary=100000.00, beginDate=null, endDate=null)
+2025-08-06 18:15:24 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Employees found by condition. Total records: 45
+2025-08-06 18:15:45 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Request received to search employees by condition: EmployeeQueryParam(id=null, username=, name=, minSalary=80000.00, maxSalary=100000.00, beginDate=null, endDate=null)
+2025-08-06 18:15:45 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Employees found by condition. Total records: 4
+2025-08-06 18:48:36 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Request received to delete employees by condition: EmployeeDeleteParam(username=, name=Test)
+2025-08-06 18:48:36 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Employees deleted successfully by condition.
+2025-08-06 18:48:46 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-06 18:48:47 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Fetched all employees successfully. Total records: 50
+2025-08-06 18:49:35 [http-nio-8080-exec-4] INFO  com.kezhang.controller.EmployeeController - Request received to insert multiple employees ...
+2025-08-06 18:49:35 [http-nio-8080-exec-4] INFO  com.kezhang.controller.EmployeeController - Converting DTOs to entities completed, total records: 3
+2025-08-06 18:49:35 [http-nio-8080-exec-4] INFO  com.kezhang.controller.EmployeeController - Employees inserted successfully, total records: 3
+2025-08-06 19:06:09 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to update employees by condition: EmployeeConditionalUpdateDTO(username=Test, name=Test, salary=88888888.00)
+2025-08-06 19:06:10 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Employees updated successfully by condition.
+2025-08-06 19:06:17 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-06 19:06:17 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Fetched all employees successfully. Total records: 53
+2025-08-06 19:50:52 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Request received to search employees by page condition: EmployeePageQueryParam(id=null, username=, name=, minSalary=50000.00, maxSalary=100000.00, beginDate=null, endDate=null, page=1, pageSize=5)
+2025-08-06 19:50:52 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Employees found by page condition. Total records: 45, Current page records: 5

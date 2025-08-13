@@ -1,0 +1,46 @@
+2025-08-05 14:49:12 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to insert employee ...
+2025-08-05 14:49:12 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Employee inserted successfully.
+2025-08-05 15:16:18 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-05 15:17:02 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Request received to delete employee with ID: 63
+2025-08-05 15:17:02 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Employee with ID: 63 deleted successfully.
+2025-08-05 15:17:06 [http-nio-8080-exec-4] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-05 15:19:42 [http-nio-8080-exec-6] INFO  com.kezhang.controller.EmployeeController - Request received to insert employee ...
+2025-08-05 15:19:42 [http-nio-8080-exec-6] INFO  com.kezhang.controller.EmployeeController - Employee inserted successfully.
+2025-08-05 15:19:59 [http-nio-8080-exec-8] INFO  com.kezhang.controller.EmployeeController - Request received to insert employee ...
+2025-08-05 15:19:59 [http-nio-8080-exec-8] INFO  com.kezhang.controller.EmployeeController - Employee inserted successfully.
+2025-08-05 15:20:13 [http-nio-8080-exec-9] INFO  com.kezhang.controller.EmployeeController - Request received to insert employee ...
+2025-08-05 15:20:13 [http-nio-8080-exec-9] INFO  com.kezhang.controller.EmployeeController - Employee inserted successfully.
+2025-08-05 15:20:16 [http-nio-8080-exec-10] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-05 15:31:40 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to delete employees with IDs: [64, 65, 66]
+2025-08-05 15:31:40 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Employees with IDs: [64, 65, 66] deleted successfully.
+2025-08-05 15:31:43 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-05 15:57:11 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to delete employee by condition: EmployeeDeleteDTO(name=TestName, gender=1)
+2025-08-05 15:57:11 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Employee deleted successfully by condition.
+2025-08-05 15:57:15 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-05 17:17:13 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to insert employee ...
+2025-08-05 17:17:13 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Employee inserted successfully.
+2025-08-05 17:17:15 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-05 17:19:14 [http-nio-8080-exec-6] INFO  com.kezhang.controller.EmployeeController - Request received to update employee: EmployeeInsertDTO(username=TestUsername222, name=TestName222, gender=1, phone=2222222222, jobTitle=null, departmentId=null, salary=null, image=null, entryDate=null)
+2025-08-05 17:19:14 [http-nio-8080-exec-6] INFO  com.kezhang.controller.EmployeeController - Employee updated successfully.
+2025-08-05 17:19:37 [http-nio-8080-exec-7] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-05 17:19:55 [http-nio-8080-exec-8] INFO  com.kezhang.controller.EmployeeController - Request received to update employee: EmployeeInsertDTO(username=TestUsername222, name=TestName222, gender=1, phone=2222222222, jobTitle=null, departmentId=null, salary=null, image=null, entryDate=null)
+2025-08-05 17:19:55 [http-nio-8080-exec-8] INFO  com.kezhang.controller.EmployeeController - Employee updated successfully.
+2025-08-05 17:25:16 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to update employee: EmployeeInsertDTO(username=TestUsername222, name=TestName222, gender=1, phone=2222222222, jobTitle=null, departmentId=null, salary=null, image=null, entryDate=null)
+2025-08-05 17:25:16 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Employee updated successfully.
+2025-08-05 17:25:36 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Request received to update employee: EmployeeInsertDTO(username=TestUsername222, name=TestName222, gender=1, phone=2222222222, jobTitle=null, departmentId=null, salary=null, image=null, entryDate=null)
+2025-08-05 17:25:36 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Employee updated successfully.
+2025-08-05 17:32:43 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to update employee: EmployeeInsertDTO(username=TestUsername222, name=TestName222, gender=1, phone=2222222222, jobTitle=null, departmentId=null, salary=null, image=null, entryDate=null)
+2025-08-05 17:32:43 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Employee updated successfully.
+2025-08-05 17:34:51 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received to update employee: EmployeeUpdateDTO(id=67, username=TestUsername222, name=TestName222, gender=1, phone=2222222222, jobTitle=null, departmentId=null, salary=null, image=null, entryDate=null)
+2025-08-05 17:34:51 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Employee updated successfully.
+2025-08-05 17:36:25 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Request received to update employee: EmployeeUpdateDTO(id=67, username=TestUsername222, name=TestName222, gender=1, phone=2222222222, jobTitle=null, departmentId=null, salary=null, image=null, entryDate=null)
+2025-08-05 17:36:25 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Employee updated successfully.
+2025-08-05 17:36:33 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-05 18:57:54 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Request received to search employee by ID: 50
+2025-08-05 18:57:54 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Employee with ID: 50 found. Details: null
+2025-08-05 18:58:08 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Request received to search employee by ID: 50
+2025-08-05 18:58:08 [http-nio-8080-exec-3] INFO  com.kezhang.controller.EmployeeController - Employee with ID: 50 found. Details: null
+2025-08-05 18:58:32 [http-nio-8080-exec-4] INFO  com.kezhang.controller.EmployeeController - Request received to search employee by ID: 30
+2025-08-05 18:58:32 [http-nio-8080-exec-4] INFO  com.kezhang.controller.EmployeeController - Employee with ID: 30 found. Details: Employee(id=30, username=HelenMitchell, password=123456, name=Helen Mitchell, gender=0, phone=3393524985, jobTitle=4, departmentId=6, salary=55065.80, image=https://i.pravatar.cc/250?u=HelenMitchell, entryDate=2020-05-19, createTime=2025-06-13T15:47:34, updateTime=2025-06-17T17:38:44)
+2025-08-05 19:04:51 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Request received to search employees by IDs : [1, 2, 3]
+2025-08-05 19:04:51 [http-nio-8080-exec-1] INFO  com.kezhang.controller.EmployeeController - Employees with IDs: [1, 2, 3] found. Total records: 3

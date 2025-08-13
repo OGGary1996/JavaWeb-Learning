@@ -1,0 +1,42 @@
+server:
+    port: 8080
+
+spring:
+  application:
+    name: MyBatisPlus-CRUD
+  datasource:
+    url: jdbc:mysql://localhost:3306/tlias_db?serverTimezone=UTC&useSSL=false
+    username: dev
+    password: dev123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # HikariCP connection pool settings
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 30000
+      max-lifetime: 1800000
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.kezhang.entity
+  configuration:
+    map-underscore-to-camel-case: true  # 下划线转驼峰，MP中默认开启，不需要显式配置；基础MyBatis中需要手动开启
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 日志输出到控制台
+  global-config:
+    db-config:
+      # table-prefix: example_  # 表前缀
+      # id-type: AUTO  # 主键策略，AUTO表示数据库自增
+      insert-strategy: NOT_NULL  # 插入时非空字段策略
+      update-strategy: NOT_NULL  # 更新时非空字段策略
+
+logging:
+  level:
+    org.apache.ibatis.transaction: INFO
+    org.mybatis.spring.SqlSessionUtils: INFO
+    org.springframework.jdbc.datasource.DataSourceTransactionManager: INFO
+
+
+
+
+

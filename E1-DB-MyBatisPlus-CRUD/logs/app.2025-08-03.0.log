@@ -1,0 +1,24 @@
+2025-08-03 21:58:06 [main] INFO  com.kezhang.E1DbMyBatisPlusCrudApplication - Starting E1DbMyBatisPlusCrudApplication using Java 21.0.7 with PID 47561 (/Users/zhangke/Documents/Programming/JavaWeb-Learning/E1-DB-MyBatisPlus-CRUD/target/classes started by zhangke in /Users/zhangke/Documents/Programming/JavaWeb-Learning)
+2025-08-03 21:58:06 [main] INFO  com.kezhang.E1DbMyBatisPlusCrudApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-03 21:58:06 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-08-03 21:58:06 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-03 21:58:06 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-03 21:58:06 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-03 21:58:06 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-03 21:58:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 296 ms
+2025-08-03 21:58:06 [main] INFO  c.b.m.e.spring.MybatisPlusApplicationContextAware - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@48c40605
+2025-08-03 21:58:06 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-08-03 21:58:06 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-08-03 21:58:06 [main] INFO  com.kezhang.E1DbMyBatisPlusCrudApplication - Started E1DbMyBatisPlusCrudApplication in 0.713 seconds (process running for 0.922)
+2025-08-03 21:58:14 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-03 21:58:14 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-03 21:58:14 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-08-03 21:58:14 [http-nio-8080-exec-2] INFO  com.kezhang.controller.EmployeeController - Request received ...
+2025-08-03 21:58:14 [http-nio-8080-exec-2] INFO  com.kezhang.service.EmployeeService - Fetching all employees from the database.
+2025-08-03 21:58:14 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-03 21:58:14 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f754d32
+2025-08-03 21:58:14 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-03 22:15:03 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-03 22:15:05 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-03 22:15:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-03 22:15:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
